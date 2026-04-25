@@ -46,6 +46,7 @@ body {
   letter-spacing: 1px;
 }
 
+/* SECTIONS */
 .section {
   padding: 60px 25px;
   max-width: 800px;
@@ -57,7 +58,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* LISTES */
 ul {
   list-style: none;
   padding: 0;
@@ -78,13 +78,10 @@ li {
   text-align: center;
 }
 
-.final a {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 25px;
-  border: 1px solid #DAAB3A;
-  text-decoration: none;
-  color: #93441A;
+/* CALENDRIER */
+.calendar {
+  margin-top: 30px;
+  border: 2px solid #DAAB3A;
 }
 </style>
 
@@ -98,7 +95,7 @@ li {
   <p>Votre santé, naturellement retrouvée.<br>Votre esprit, profondément apaisé.</p>
 
   <div class="cta">
-    <a href="#">Prendre rendez-vous</a>
+    <a href="#rdv">Prendre rendez-vous</a>
     <a href="#">Explorer les créations</a>
   </div>
 </div>
@@ -106,19 +103,13 @@ li {
 <!-- POSITIONNEMENT -->
 <div class="section">
   <h2>Une approche globale</h2>
-  <p>
-  Je suis naturopathe certifiée et créatrice d’univers introspectifs.
-  </p>
-  <p>
-  Mon travail relie le corps et l’esprit :
-  </p>
+  <p>Je suis naturopathe certifiée et créatrice d’univers introspectifs.</p>
+  <p>Mon travail relie le corps et l’esprit :</p>
   <ul>
     <li>— Protocoles naturels personnalisés</li>
     <li>— Expériences créatives et introspectives</li>
   </ul>
-  <p>
-  Objectif : restaurer un équilibre durable, en profondeur.
-  </p>
+  <p>Objectif : restaurer un équilibre durable, en profondeur.</p>
 </div>
 
 <!-- EXPERTISE -->
@@ -158,20 +149,13 @@ li {
 <!-- PONT -->
 <div class="section">
   <h2>Un pont entre corps et esprit</h2>
-  <p>
-  La santé ne se limite pas au corps.
-  </p>
-  <p>
-  Elle passe aussi par :
-  </p>
+  <p>La santé ne se limite pas au corps.</p>
   <ul>
-    <li>— L’expression émotionnelle</li>
-    <li>— La créativité</li>
-    <li>— Le ralentissement mental</li>
+    <li>— Expression émotionnelle</li>
+    <li>— Créativité</li>
+    <li>— Ralentissement mental</li>
   </ul>
-  <p>
-  C’est dans cet espace que mes deux approches se rejoignent.
-  </p>
+  <p>C’est dans cet espace que mes deux approches se rejoignent.</p>
 </div>
 
 <!-- OFFRES -->
@@ -185,18 +169,19 @@ li {
   </ul>
 </div>
 
-<!-- CTA + CALENDRIER -->
-<div class="section final">
+<!-- CALENDRIER -->
+<div class="section final" id="rdv">
   <h2>Prendre rendez-vous</h2>
   <p>Choisissez directement un créneau :</p>
 
-  <!-- Calendly inline widget -->
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/alexandraleprincepro"
-       style="min-width:320px;height:700px;">
+  <div class="calendar">
+    <iframe 
+      src="https://calendly.com/alexandraleprincepro"
+      width="100%" 
+      height="700"
+      frameborder="0">
+    </iframe>
   </div>
-
-  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
   <p style="margin-top:20px;">
     Ou contactez-moi : alexandraleprincepro@gmail.com
