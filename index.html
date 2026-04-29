@@ -141,6 +141,46 @@ li { padding: 6px 0; }
   .ebook-timeline { text-align: left; }
 }
 
+
+/* NOTIFY FORM */
+.notify-form {
+  display: flex;
+  gap: 0;
+  max-width: 380px;
+}
+.notify-input {
+  flex: 1;
+  padding: 10px 14px;
+  background: rgba(238,230,216,0.08);
+  border: 1px solid rgba(218,171,58,0.5);
+  border-right: none;
+  color: #EEE6D8;
+  font-family: Georgia, serif;
+  font-size: 0.85em;
+  outline: none;
+}
+.notify-input::placeholder { color: rgba(238,230,216,0.35); }
+.notify-btn {
+  padding: 10px 16px;
+  background: transparent;
+  border: 1px solid #DAAB3A;
+  color: #DAAB3A;
+  font-family: Georgia, serif;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+.notify-btn:hover { background: rgba(218,171,58,0.15); }
+.notify-confirm {
+  color: #DAAB3A;
+  font-size: 0.9em;
+  font-style: italic;
+  margin: 0;
+  padding: 10px 0;
+}
+
 /* CALENDRIER */
 .final { text-align: center; }
 .calendar { margin-top: 30px; border: 2px solid #DAAB3A; }
@@ -219,7 +259,18 @@ li { padding: 6px 0; }
         <div class="timeline-row"><span class="t-when">Semaine 2</span><span class="t-what">Énergie plus stable, moins d'irritabilité</span></div>
         <div class="timeline-row"><span class="t-when">Semaine 6</span><span class="t-what">Vitalité reconstruite durablement</span></div>
       </div>
-      <a href="#rdv" class="ebook-cta">Être notifiée le 9 mai →</a>
+      <div class="notify-form">
+  <input type="email" placeholder="votre@email.com" class="notify-input">
+  <button type="button" class="notify-btn" onclick="
+    var input = this.previousElementSibling;
+    if(input.value && input.value.includes('@')){
+      this.parentElement.innerHTML = '<p class=\'notify-confirm\'>✓ Vous serez notifiée le 9 mai — merci !</p>';
+    } else {
+      input.style.borderColor='#DAAB3A';
+      input.focus();
+    }
+  ">Me notifier le 9 mai</button>
+</div>
     </div>
   </div>
 </div>
